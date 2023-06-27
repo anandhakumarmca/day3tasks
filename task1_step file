@@ -1,0 +1,13 @@
+How to Compare two JSON have the same properties without order?
+   a. let obj1 = {name: "Person1",age:5};
+   b. let obj2 = {age: 5, name: "Person1"};
+
+-----------------------------------------------------------------------
+To Compare JSON obj1, JSON obj2 have the same properties without order,
+we could follow the below Steps,
+
+Step 1 :  Check if the number of keys in objects are the same
+Step 2 :  Check if all keys in obj1 are available in obj2
+Step 3 :  Check if the values of the keys are the same
+
+We can create these steps of things inside the compareObject function

@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Displaying countries flags using XMLHttpRequest</title>
+  </head>
+  <body>
+    <script>
+      //Creating a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Defining the HTTP method
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all"; // input as given API URL
+
+      //Opening the request
+      xhr.open(method, url);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) { //checking the request status
+          //Request was successful
+          //console.log(xhr.responseText);
+          var countriesDetails = JSON.parse(xhr.responseText); //parsing url into json object
+          for (var i = 0; i < countriesDetails.length; i++) { //iterate all json object
+           // console.log(countriesDetails);
+            console.log(countriesDetails[i].flag); //getting countries flags
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+</html>

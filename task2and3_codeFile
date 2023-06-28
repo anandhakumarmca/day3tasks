@@ -1,4 +1,3 @@
-//Diplaying Coutries Details with XMLHttpRequest using given api url
 <html>
   <head>
     <title>Displaying countries details with XMLHttpRequest</title>
